@@ -36,3 +36,30 @@
     transform: rotate(360deg);
   }
 }
+
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+.board-row {
+  display: flex;
+  flex-direction: row;
+}
+.square {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+.cross {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.check {
+  color: rgb(23, 205, 23);
+  background-color: rgba(23, 205, 23, 0.1);
+}
