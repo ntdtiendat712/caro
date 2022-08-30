@@ -58,10 +58,37 @@
   margin: 30px;
 }
 
-
+.container-board {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.container-player-info{
+  position:absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 0px 200px;
+  box-sizing: border-box;
+}
+.avatar {
+  width: 200px;
+  height: 200px;
+}
+.player-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 .board {
   display: flex;
   flex-direction: column;
+  z-index: 2;
 }
 .board-row {
   display: flex;

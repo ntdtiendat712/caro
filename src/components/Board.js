@@ -1,4 +1,3 @@
-import { cloneDeep } from "lodash";
 import React from "react";
 import { STATUS } from "../ultils/constant";
 import Square from "./Square";
@@ -47,9 +46,9 @@ class Board extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const { sizeBoard } = this.props;
+    const { sizeBoard, children } = this.props;
     return (
-      <div className="container">
+      <div className="container-board">
         <div className="board">
           {[...Array(sizeBoard).keys()].map((index1) => (
             <div className="board-row">
@@ -67,6 +66,7 @@ class Board extends React.Component {
             </div>
           ))}
         </div>
+        <div className="container-player-info">{children}</div>
       </div>
     );
   }
