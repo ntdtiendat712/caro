@@ -65,7 +65,7 @@ class Player extends React.Component {
   render() {
     const { name, index } = this.props;
     return (
-      <div className="player-info">
+      <div className={`player-info-${index + 1}`}>
         <div className="avatar">
           <BigHead {...this.state.avatarProps} faceMask={false} />
           <div

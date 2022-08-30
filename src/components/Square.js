@@ -7,14 +7,17 @@ class Square extends React.PureComponent {
   }
 
   shouldComponentUpdate(nextProps) {
-    return nextProps.status !== this.props.status;
+    return (
+      nextProps.status !== this.props.status ||
+      nextProps.size !== this.props.size
+    );
   }
 
   render() {
-    const { status, index, handleCheck } = this.props;
+    const { status, index, handleCheck, size } = this.props;
     return (
       <div
-        className={`square square${
+        className={`square size-${size} square${
           status === STATUS.player_1
             ? "-check"
             : status === STATUS.player_2

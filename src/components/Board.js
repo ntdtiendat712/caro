@@ -60,13 +60,14 @@ class Board extends React.Component {
                     index={index}
                     handleCheck={this.handleCheck}
                     status={this.state.boardData[index]}
+                    size={sizeBoard <= 10 ? 300 / sizeBoard : 600 / sizeBoard}
                   />
                 );
               })}
             </div>
           ))}
+          {children}
         </div>
-        <div className="container-player-info">{children}</div>
       </div>
     );
   }
