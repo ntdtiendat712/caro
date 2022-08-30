@@ -1,6 +1,7 @@
 import React from "react";
 import { BigHead } from "@bigheads/core";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShuffle } from "@fortawesome/free-solid-svg-icons";
 const data = {
   accessory: ["none", "roundGlasses", "tinyGlasses", "shades"],
   body: ["chest", "breasts"],
@@ -67,8 +68,18 @@ class Player extends React.Component {
       <div className="player-info">
         <div className="avatar">
           <BigHead {...this.state.avatarProps} faceMask={false} />
+          <div
+            className="avatar-button"
+            onClick={() =>
+              this.setState({
+                avatarProps: getRandomAvatarProps(),
+              })
+            }
+          >
+            <FontAwesomeIcon size="1x" icon={faShuffle} />
+          </div>
         </div>
-        <div>{name}</div>
+        <div className="player-name">{name}</div>
       </div>
     );
   }
