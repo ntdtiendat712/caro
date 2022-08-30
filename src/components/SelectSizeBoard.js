@@ -9,7 +9,7 @@ class SelectSizeBoard extends React.Component {
   render() {
     const { sizeBoard, handleChangeBoardSize } = this.props;
     return (
-      <div className="container">
+      <div className="row-select-size-board">
         <select
           defaultValue={sizeBoard}
           onChange={(e) => {

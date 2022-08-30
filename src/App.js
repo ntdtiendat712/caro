@@ -13,10 +13,6 @@ class App extends React.Component {
   }
 
   handleChangeBoardSize(size) {
-    console.log(
-      "🚀 ~ file: App.js ~ line 16 ~ App ~ handleChangeBoardSize ~ size",
-      size
-    );
     if (size.toString() !== this.state.sizeBoard.toString()) {
       this.setState({
         sizeBoard: parseInt(size),
@@ -30,7 +26,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="fullpage">
+        <h1 className="title">Basic Caro</h1>
         <SelectSizeBoard
           sizeBoard={this.state.sizeBoard}
           handleChangeBoardSize={this.handleChangeBoardSize}
