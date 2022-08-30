@@ -68,6 +68,7 @@ class Board extends React.Component {
           ))}
           {children}
         </div>
+        <div className="text-winner">Player 1 win!</div>
       </div>
     );
   }
